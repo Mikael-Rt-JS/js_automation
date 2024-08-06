@@ -1,0 +1,96 @@
+<link href="./static/css/reset.css" rel="stylesheet" type="text/css"/>
+
+<style>
+  #form{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #3c3c3c;
+    color: snow;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+
+  }
+  #form label{
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+  }
+  #form input{
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #form button{
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    background: blue;
+    cursor: pointer;
+    color: snow;
+  }
+  .err{
+    color: #ffc107;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+  
+  <form id="form" action="" method="post" enctype="multipart/form-data">
+
+    <label for="name">Your name:</label>
+    <input id="name" type="text" name="name"/>
+    <p class="err err_name"></p>
+
+    <label for="surname">Your surname:</label>
+    <input id="surname" type="text" name="surname"/>
+    <p class="err err_surname"></p>
+
+    <label for="password">Your password:</label>
+    <input id="password" type="password" name="password"/>
+    <p class="err err_password"></p>
+
+    <label for="title">Your title:</label>
+    <input id="title" type="text" name="title"/>
+    <p class="err err_title"></p>
+    
+    <label for="email">Your email:</label>
+    <input id="email" type="text" name="email"/>
+    <p class="err err_email"></p>
+
+    <label for="phones_code">Your phone:</label>
+    <select name="phones_code" id="phones_code" data-phonelength=""></select>
+    <input id="phone" type="number" name="phone"/>
+    <p class="err err_phone"></p>
+    
+    <label for="avatar">Your photo:</label>
+    <input id="avatar" type="file" name="avatar"/>
+    <p class="err err_avatar"></p>
+
+    <label for="files">You can upload up to 6 images:</label>
+    <input id="files" type="file" name="files" multiple/>
+    <p class="err err_files"></p>
+
+    <button id="ready_send" type="submit">Add</button> 
+  </form>
+  
+  <ul>
+    <li>
+      <a href="./index.php">Home</a>
+    </li>
+  </ul>
+<script src="./static/js/phone_code_world.js"></script>
+<script src="./static/js/Languages.js"></script>
+<script src="./static/js/Form.js"></script>
+<script src="./static/js/form/form.js"></script>
